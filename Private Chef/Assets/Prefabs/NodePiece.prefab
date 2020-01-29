@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5938572177950127532}
   - component: {fileID: 5938572177950127530}
   - component: {fileID: 5938572177950127533}
-  - component: {fileID: 2469545394725645765}
+  - component: {fileID: 7021998440593488523}
   m_Layer: 5
   m_Name: NodePiece
   m_TagString: Untagged
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2469545394725645765
+--- !u!114 &7021998440593488523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,3 +87,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d305d4f657374614fa014c8eddeb3b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  index:
+    x: 0
+    y: 0
+  pos: {x: 0, y: 0}
+  rect: {fileID: 0}

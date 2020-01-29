@@ -49,16 +49,16 @@ public class Match3 : MonoBehaviour
     void VerifyBoard()
     {
         List<int> remove;
-        for (int x = 0; x < height; x++)
+        for (int x = 0; x < width; x++)
         {
-            for (int y = 0; y < width; y++)
+            for (int y = 0; y < height; y++)
             {
                 Point p = new Point(x, y);
                 int val = getValueAtPoint(p);
                 if (val <= 0) continue;
 
                 remove = new List<int>();
-                while(isConnected(p,true).Count > 0)
+                while (isConnected(p, true).Count > 0)
                 {
                     val = getValueAtPoint(p);
                     if (!remove.Contains(val))
@@ -81,7 +81,7 @@ public class Match3 : MonoBehaviour
                 NodePiece node = p.GetComponent<NodePiece>();
                 RectTransform rect = p.GetComponent<RectTransform>();
                 rect.anchoredPosition = new Vector2(32 + (64 * x), -32 - (64 * y));
-               // node.Initialize(val, new Point(x, y), pieces[val - 1]);
+                node.Initialize(val, new Point(x, y), pieces[val - 1]);
             }
         }
     }
@@ -113,7 +113,7 @@ public class Match3 : MonoBehaviour
                 }
             }
 
-            if (same < 1) //If there are 1 one or more of the same shapein the direction then we know it is a match
+            if (same > 1) //If there are 1 one or more of the same shapein the direction then we know it is a match
                 AddPoints(ref connected, line); //Add those points to the overarching connected list
         }
 
@@ -164,8 +164,6 @@ public class Match3 : MonoBehaviour
             for (int i = 0; i < connected.Count; i++)
                 AddPoints(ref connected, isConnected(connected[i], false));
         }
-        if (connected.Count > 0)
-            connected.Add(p);
 
         return connected;
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class NewBehaviourScript : MonoBehaviour
+public class NodePiece : MonoBehaviour
 {
     public int value;
     public Point index;
