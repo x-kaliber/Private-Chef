@@ -229,7 +229,13 @@ public class Match3 : MonoBehaviour
             seed += acceptableCharacters[Random.Range(0, acceptableCharacters.Length)];
         return seed;
     }
+
+    public Vector2 getPositionFromPoint(Point p)
+    {
+        return new Vector2(32 + (64 * p.x), -32 - (64 * p.y));
+    }
 }
+
 [System.Serializable]
 public class Node
 {
