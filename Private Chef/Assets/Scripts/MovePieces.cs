@@ -63,8 +63,7 @@ public class MovePieces : MonoBehaviour
         //If newIndex != moving.Index
         //Flip the pieces around in the game board
         //else
-        //Reset thde piece back to original spot
-
+        game.ResetPiece(moving);
         moving = null;
 
     }

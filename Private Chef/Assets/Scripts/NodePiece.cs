@@ -51,6 +51,18 @@ public class NodePiece : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     public bool UpdatePiece()
     {
+        if(Vector3.Distance(rect.anchoredPosition, pos) > 1)
+        {
+            MovePositionTo(pos);
+            updating = true;
+            return true;
+        }
+        else
+        {
+            rect.anchoredPosition = pos;
+            updating = false;
+            return false;
+        }
         return true;
         //will return false if it is not moving
     }
