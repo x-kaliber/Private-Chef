@@ -63,8 +63,6 @@ public class NodePiece : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             updating = false;
             return false;
         }
-        return true;
-        //will return false if it is not moving
     }
 
     public void UpdateName()

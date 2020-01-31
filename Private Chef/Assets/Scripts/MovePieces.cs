@@ -44,7 +44,7 @@ public class MovePieces : MonoBehaviour
 
             Vector2 pos = game.getPositionFromPoint(moving.index);
             if (!newIndex.Equals(moving.index))
-                pos += Point.mult(new Point(add.x, - add.y), 16).ToVector();
+                pos += Point.mult(add, 16).ToVector();
             moving.MovePositionTo(pos);
         }
     }
@@ -60,10 +60,10 @@ public class MovePieces : MonoBehaviour
     {
         if (moving == null) return;
         Debug.Log("Dropped");
-        //If newIndex != moving.Index
-        //Flip the pieces around in the game board
-        //else
-        game.ResetPiece(moving);
+        if (!newIndex.Equals(moving.index))
+            game.FlipPieces(moving.index, newIndex, true);
+        else
+            game.ResetPiece(moving);
         moving = null;
 
     }
