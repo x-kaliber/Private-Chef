@@ -32,7 +32,7 @@ public class MovePieces : MonoBehaviour
 
             newIndex = Point.clone(moving.index);
             Point add = Point.zero;
-            if (dir.magnitude > 32) //If our mouse is 32 pixels away from the starting point of the mouse
+            if (dir.magnitude > 34) //If our mouse is 34 pixels away from the starting point of the mouse
             {
                 //Make add either (1,0) | (-1,0) | (0,1) | (0.-1) depending on the direction of the mouse point
                 if (aDir.x > aDir.y)
@@ -44,7 +44,7 @@ public class MovePieces : MonoBehaviour
 
             Vector2 pos = game.getPositionFromPoint(moving.index);
             if (!newIndex.Equals(moving.index))
-                pos += Point.mult(add, 16).ToVector();
+                pos += Point.mult(new Point(add.x, -add.y), 16).ToVector();
             moving.MovePositionTo(pos);
         }
     }

@@ -174,7 +174,10 @@ MonoBehaviour:
   - {fileID: -488248382649040768, guid: 34f6321b206afab459fb7c8d37989456, type: 3}
   - {fileID: 5528609633622603068, guid: 2c97df9695607b04c92ec362851a0890, type: 3}
   gameBoard: {fileID: 1520717832}
+  killedBoard: {fileID: 647071515}
   nodePiece: {fileID: 5938572177950127535, guid: 33e219dbe98ac3e4cb26430a94251477,
+    type: 3}
+  killedPiece: {fileID: 2516592959780669366, guid: 7415bc213c127224db55342a0c95fc91,
     type: 3}
 --- !u!4 &477617363
 Transform:
