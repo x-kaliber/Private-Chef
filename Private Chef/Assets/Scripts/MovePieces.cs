@@ -38,7 +38,7 @@ public class MovePieces : MonoBehaviour
                 if (aDir.x > aDir.y)
                     add = (new Point((nDir.x > 0) ? 1 : -1, 0));
                 else if (aDir.y > aDir.x)
-                    add = (new Point(0, (nDir.x > 0) ? -1 : 1));
+                    add = (new Point(0, (nDir.y > 0) ? -1 : 1));
             }
             newIndex.add(add);
 
