@@ -15,6 +15,16 @@ public class Play : MonoBehaviour
         SceneManager.LoadScene("Credit");
     }
 
+    public void RecipeBook()
+    {
+        SceneManager.LoadScene("Recipes");
+    }
+
+    public void Mall()
+    {
+        SceneManager.LoadScene("Store");
+    }
+
     public void QuitGame()
     {
         Debug.Log ("Quit");
