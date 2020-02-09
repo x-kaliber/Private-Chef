@@ -25,6 +25,11 @@ public class Play : MonoBehaviour
         SceneManager.LoadScene("Store");
     }
 
+    public void OptionsMenu()
+    {
+        SceneManager.LoadScene("Options");
+    }
+
     public void QuitGame()
     {
         Debug.Log ("Quit");
