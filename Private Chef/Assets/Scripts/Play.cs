@@ -31,6 +31,11 @@ public class Play : MonoBehaviour
         SceneManager.LoadScene("Options");
     }
 
+    public void Office() // We call Office Scene
+    {
+        SceneManager.LoadScene("Office");
+    }
+
     public void QuitGame() // We Quit the game
     {
         Debug.Log ("Quit");
