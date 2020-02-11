@@ -73,6 +73,7 @@ public class Match3 : MonoBehaviour
                     { 
                     nodePiece.gameObject.SetActive(false);
                         dead.Add(nodePiece);
+                        Cash.CashAmount += 1;
                     }
                     node.SetPiece(null);
                 }
