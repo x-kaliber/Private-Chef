@@ -73,7 +73,8 @@ public class Match3 : MonoBehaviour
                     { 
                     nodePiece.gameObject.SetActive(false);
                         dead.Add(nodePiece);
-                        Cash.CashAmount += 1;
+                        Cash.CashAmount += (getValueAtPoint(pnt) ); // We add the value of our nodes  as money to our cash counter.
+                        Points.PointsAmount += (getValueAtPoint(pnt) * 3); // We add the value of our nodes  as points to our cash counter.
                     }
                     node.SetPiece(null);
                 }
