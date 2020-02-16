@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 16250961}
   - component: {fileID: 16250963}
   - component: {fileID: 16250962}
-  - component: {fileID: 16250964}
   m_Layer: 5
   m_Name: RunExpenses
   m_TagString: Untagged
@@ -327,18 +326,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16250960}
   m_CullTransparentMesh: 0
---- !u!114 &16250964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16250960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12308c42e5b88c488a0044d7bc1b6ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &16605757
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +665,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 169112649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 327308264}
+        m_MethodName: HiringAgency
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &169112649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,6 +853,7 @@ GameObject:
   - component: {fileID: 327308261}
   - component: {fileID: 327308263}
   - component: {fileID: 327308262}
+  - component: {fileID: 327308264}
   m_Layer: 5
   m_Name: Market
   m_TagString: Untagged
@@ -920,6 +919,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327308260}
   m_CullTransparentMesh: 0
+--- !u!114 &327308264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327308260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67bc40f1144a544aa2e53eaaef3f3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &327769786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1442,6 @@ GameObject:
   - component: {fileID: 564122823}
   - component: {fileID: 564122825}
   - component: {fileID: 564122824}
-  - component: {fileID: 564122826}
   m_Layer: 5
   m_Name: TotalEarnings
   m_TagString: Untagged
@@ -1498,18 +1508,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564122822}
   m_CullTransparentMesh: 0
---- !u!114 &564122826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564122822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12308c42e5b88c488a0044d7bc1b6ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &572910649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,9 +2021,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 653943444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12308c42e5b88c488a0044d7bc1b6ec, type: 3}
+  m_Script: {fileID: 11500000, guid: a8e148d9a76fdb947822ba39bf79fe51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Income: {fileID: 653943446}
 --- !u!1 &684965717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2879,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 500703201}
+      - m_Target: {fileID: 327308264}
         m_MethodName: Office
         m_Mode: 1
         m_Arguments:
@@ -3966,7 +3965,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1374997537}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 327308264}
+        m_MethodName: GroceryStore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1374997537
 MonoBehaviour:
   m_ObjectHideFlags: 0

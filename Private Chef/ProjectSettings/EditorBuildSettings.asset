@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Office.unity
     guid: 03f7d2df14a0de948ba7e3c001598e6c
+  - enabled: 1
+    path: Assets/Scenes/HiringAgency.unity
+    guid: f15ae1e1f55febc4eb23e488c33a15ce
+  - enabled: 1
+    path: Assets/Scenes/GroceryStore.unity
+    guid: 0b8900cb4f7d72743b84ee71270d0130
   m_configObjects: {}
