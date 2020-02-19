@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class HiringAgencyControlScript : MonoBehaviour
 {
     int moneyAmount;
-    int isChefHired;
+    int isChefHired = 0;
     int isCelebrityChefHired;
     int Cost;
     int StartingFunds;
+    int HiredChefs = 0;
+    int HiredCelebrityChefs = 0;
+
 
     public Text CostText;
     public Text StartingFundsText;
@@ -42,34 +45,53 @@ public class HiringAgencyControlScript : MonoBehaviour
         isChefHired = PlayerPrefs.GetInt("isChefHired");
         isCelebrityChefHired = PlayerPrefs.GetInt("isCelebrityChefHired");
 
-        if (StartingFunds >= 1000000 && moneyAmount >= 1000000 && isCelebrityChefHired == 1) // we set the conditions for setting the button active for Celebrity chef
-            HireCelebrityBtn.interactable = true;
+
+        if (Cash.moneyAmount >= 1000000)// we set the conditions for setting the button active for  Celebrity chef
+        {
+            if (isCelebrityChefHired == 1)
+            {
+                if (HiredCelebrityChefs == 0)
+                {
+                    HireCelebrityBtn.interactable = true;
+                }
+            }
+        }
         else
             HireCelebrityBtn.interactable = false;
 
-        if (StartingFunds >= 10000 && moneyAmount >= 10000 && isChefHired == 1)// we set the conditions for setting the button active for  chef
-            HireBtn.interactable = true;
+        if (Cash.moneyAmount >= 10000)// we set the conditions for setting the button active for  chef
+        {
+            if (isChefHired == 1)
+            {
+                if (HiredChefs == 0)
+                {
+                    HireBtn.interactable = true;
+                }
+            }
+        }
         else
             HireBtn.interactable = false;
     }
 
     public void HireCelebrityChef()
     {
-        moneyAmount -= 1000000;
+        Cash.moneyAmount -= 1000000;
         Cost += 1000000;
+        HiredCelebrityChefs += 1;
         PlayerPrefs.SetInt("isCelebrityChefHired", 1);
         CelebrityChefPrice.text = "Hired!";
         PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
-        HireCelebrityBtn.gameObject.SetActive(false);
+        HireBtn.interactable = false;
     }
     public void HireChef()
     {
-        moneyAmount -= 10000;
+        Cash.moneyAmount -= 10000;
         Cost += 10000;
+        HiredChefs += 1;
         PlayerPrefs.SetInt("isChefHired", 1);
         ChefPrice.text = "Hired!";
         PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
-        HireBtn.gameObject.SetActive(false);
+        HireBtn.interactable = false;
     }
 
     public void Office() // We call Office Scene
