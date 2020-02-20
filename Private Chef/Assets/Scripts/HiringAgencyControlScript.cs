@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class HiringAgencyControlScript : MonoBehaviour
 {
     int moneyAmount;
-    int isChefHired = 0;
+    int isChefHired;
     int isCelebrityChefHired;
     int Cost;
     int StartingFunds;

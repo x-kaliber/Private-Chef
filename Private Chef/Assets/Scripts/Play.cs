@@ -8,7 +8,7 @@ public class Play : MonoBehaviour
 
   public void PlayGame() // We call the main Game
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("StageSelection");
     }
 
     public void CreditGame() // We call the Credit Scene
