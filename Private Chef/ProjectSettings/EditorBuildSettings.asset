@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSelection.unity
     guid: 07efe9d8aa256e84e8e12abceacdb619
   - enabled: 1
-    path: Assets/Scenes/MainGame.unity
+    path: Assets/Scenes/Main Game Scenes/MainGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Credit.unity
@@ -36,9 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GroceryStore.unity
     guid: 0b8900cb4f7d72743b84ee71270d0130
   - enabled: 1
-    path: Assets/Scenes/HotDogCart.unity
+    path: Assets/Scenes/Main Game Scenes/HotDogCart.unity
     guid: 85eb4c0a0dc8c9c499300ff55035742f
   - enabled: 1
-    path: Assets/Scenes/PastaCart.unity
+    path: Assets/Scenes/Main Game Scenes/PastaCart.unity
     guid: 4fa99c124bae8304eb6803c8e6e5d5ea
   m_configObjects: {}

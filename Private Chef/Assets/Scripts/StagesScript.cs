@@ -15,15 +15,15 @@ public class StagesScript : MonoBehaviour
 
     void Start()
     {
-        moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
+        moneyAmount = PlayerPrefs.GetInt("GoldCoins");
     }
 
     void Update()
     {
-        moneyAmountText.text = "Current Funds :  " + Cash.moneyAmount.ToString() + "$";
+        moneyAmountText.text = "Current Funds :  " + Cash.GoldCoins.ToString() + "." + Cash.CopperCoins.ToString() + "$";
 
 
-        if (Cash.moneyAmount >= 5000)// we set the conditions for setting the button active for Hot Dog
+        if (Cash.GoldCoins >= 1000)// we set the conditions for setting the button active for Hot Dog
         {
 
                 HotDogCartBtn.interactable = true;
@@ -32,7 +32,7 @@ public class StagesScript : MonoBehaviour
         else
             HotDogCartBtn.interactable = false;
 
-        if (Cash.moneyAmount >= 7000)// we set the conditions for setting the button active for Hot Dog
+        if (Cash.GoldCoins >= 2000)// we set the conditions for setting the button active for Hot Dog
         {
 
             PastaCartBtn.interactable = true;
@@ -54,17 +54,17 @@ public class StagesScript : MonoBehaviour
 
     public void PlayHotDogGame() // We call the Hot Dog Game
     {
-        Cash.moneyAmount -= 5000;
+        Cash.GoldCoins -= 5000;
         Cost += 5000;
-        PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
+        PlayerPrefs.SetInt("GoldCoins", moneyAmount);
         SceneManager.LoadScene("HotDogCart");
     }
 
     public void PlayPastaGame() // We call the Pasta Game
     {
-        Cash.moneyAmount -= 7000;
+        Cash.GoldCoins -= 7000;
         Cost += 7000;
-        PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
+        PlayerPrefs.SetInt("GoldCoins", moneyAmount);
         SceneManager.LoadScene("PastaCart");
     }
 }
