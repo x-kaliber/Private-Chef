@@ -32,7 +32,7 @@ public class StagesScript : MonoBehaviour
         else
             HotDogCartBtn.interactable = false;
 
-        if (Cash.GoldCoins >= 2000)// we set the conditions for setting the button active for Hot Dog
+        if (Cash.GoldCoins >= 2000)// we set the conditions for setting the button active for Pasta
         {
 
             PastaCartBtn.interactable = true;
@@ -54,7 +54,7 @@ public class StagesScript : MonoBehaviour
 
     public void PlayHotDogGame() // We call the Hot Dog Game
     {
-        Cash.GoldCoins -= 5000;
+        Cash.GoldCoins -= 1000;
         Cost += 5000;
         PlayerPrefs.SetInt("GoldCoins", moneyAmount);
         SceneManager.LoadScene("HotDogCart");
@@ -62,7 +62,7 @@ public class StagesScript : MonoBehaviour
 
     public void PlayPastaGame() // We call the Pasta Game
     {
-        Cash.GoldCoins -= 7000;
+        Cash.GoldCoins -= 2000;
         Cost += 7000;
         PlayerPrefs.SetInt("GoldCoins", moneyAmount);
         SceneManager.LoadScene("PastaCart");

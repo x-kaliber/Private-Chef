@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Cash : MonoBehaviour
 {
     int HiredChef;
+
     public Text Income;
 
     public static int GoldCoins;
@@ -19,6 +20,7 @@ public class Cash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+ 
         HiredChef = PlayerPrefs.GetInt("isChefHired");
         if(HiredChef == 2)
         {
@@ -33,6 +35,7 @@ public class Cash : MonoBehaviour
             GoldCoins += 1;
             CopperCoins -= 99;
         }
+
         Income.text = GoldCoins.ToString() + "." + CopperCoins.ToString();
         PlayerPrefs.SetInt("GoldCoins", GoldCoins);
         PlayerPrefs.SetInt("CopperCoins", CopperCoins);
