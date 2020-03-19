@@ -88,7 +88,7 @@ public class HiringAgencyControlScript : MonoBehaviour
         Cash.GoldCoins -= 10000;
         Cost += 10000;
         HiredChefs += 1;
-        PlayerPrefs.SetInt("isChefHired", 2);
+        PlayerPrefs.SetInt("isChefHired", 1);
         ChefPrice.text = "Hired!";
         PlayerPrefs.SetInt("GoldCoins", moneyAmount);
         HireBtn.interactable = false;

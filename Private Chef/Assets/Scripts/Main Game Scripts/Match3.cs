@@ -76,19 +76,19 @@ public class Match3 : MonoBehaviour
                         if (connected.Count <= 3)
                         {
                             Cash.CopperCoins += (getValueAtPoint(pnt) ); // We add the value of our nodes  as money to our cash counter.
-                            Points.PointsAmount += (getValueAtPoint(pnt)); // We add the value of our nodes  as points to our cash counter.
+                            Points.PointsAmount += (getValueAtPoint(pnt)); // We add the value of our nodes  as points to our xp counter.
                             Debug.Log("connected 3");
                         }
                         if (connected.Count == 4)
                         {
                             Cash.CopperCoins += (getValueAtPoint(pnt) + 6); // We add the value of our nodes  as money to our cash counter.
-                            Points.PointsAmount += (getValueAtPoint(pnt) * 2); // We add the value of our nodes  as points to our cash counter.
+                            Points.PointsAmount += (getValueAtPoint(pnt) * 2); // We add the value of our nodes  as points to our xp counter.
                             Debug.Log("Congratulations you connected 4");
                         }
                         if(connected.Count >= 5)
                         {
                             Cash.CopperCoins += (getValueAtPoint(pnt) + 20); // We add the value of our nodes  as money to our cash counter.
-                            Points.PointsAmount += (getValueAtPoint(pnt) * 3); // We add the value of our nodes  as points to our cash counter.
+                            Points.PointsAmount += (getValueAtPoint(pnt) * 3); // We add the value of our nodes  as points to our xp counter.
                             Debug.Log("WOW AAAAAMAZING JOB You connected more than 5");
                         }
                     }
